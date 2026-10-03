@@ -202,3 +202,35 @@ export function TabChips({ tabs, active, label = 'Sections' }: { tabs: { key: st
     </nav>
   )
 }
+
+export function FilterChips<T extends string>({
+  options,
+  value,
+  onChange,
+  label,
+}: {
+  options: { key: T; label: string }[]
+  value: T
+  onChange: (key: T) => void
+  label: string
+}) {
+  return (
+    <div role="group" aria-label={label} className="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto [scrollbar-width:none]">
+      <div className="flex gap-2 w-max pr-4 sm:pr-0">
+        {options.map((o) => (
+          <button
+            key={o.key}
+            onClick={() => onChange(o.key)}
+            aria-pressed={value === o.key}
+            className={cn(
+              'min-h-10 px-4 rounded-full text-sm whitespace-nowrap transition-colors',
+              value === o.key ? 'bg-[#0d2147] text-white font-semibold' : 'bg-white border border-[#d1d9e6] hover:border-[#0d2147]',
+            )}
+          >
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}

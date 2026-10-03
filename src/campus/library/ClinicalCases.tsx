@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Stethoscope } from 'lucide-react'
 import CampusLayout from '../CampusLayout'
-import { EmptyState, buttonSecondary } from '../ui'
+import { EmptyState, FilterChips, buttonSecondary } from '../ui'
 import { LIBRARY, TOPICS, type TopicKey, type LibraryItem } from '../data/library'
-import { CaseCard, FilterChips } from './parts'
+import { CaseCard } from './parts'
 
 type TopicFilter = 'all' | TopicKey
 type LevelFilter = 'all' | NonNullable<LibraryItem['level']>

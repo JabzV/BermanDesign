@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react'
 import { Search, X, ArrowRight, Stethoscope, SearchX, Play } from 'lucide-react'
 import CampusLayout from '../CampusLayout'
-import { Card, TopicTile, EmptyState, TabChips, SectionHeader, buttonSecondary } from '../ui'
+import { Card, TopicTile, EmptyState, TabChips, SectionHeader, FilterChips, buttonSecondary } from '../ui'
 import { LIBRARY, TOPICS, TYPE_LABEL, type ItemType, type TopicKey } from '../data/library'
 import { FACULTY } from '../data/learn'
-import { ItemList, FilterChips } from './parts'
+import { ItemList } from './parts'
 import grandRoundsPhoto from '../../imports/aasagfg.png'
 
 type TypeFilter = 'all' | ItemType
