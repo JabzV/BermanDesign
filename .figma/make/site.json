@@ -1,0 +1,11 @@
+{
+  "title": "Berman Institute",
+  "description": "A digital platform offering healthcare professionals structured education, networking, and research in longevity, metabolic health, and emerging medical fields.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
