@@ -30,21 +30,21 @@ Logged-in learner experience. Source: [BERMAN_INSTITUTE_SYSTEM_REFERENCE.md](BER
 - [x] **Library Item Detail** — Single video, article, or case view
 
 ## Research
-- [ ] **Research Feed** — Latest research updates and briefs
-- [ ] **Journal Club** — Monthly faculty-moderated literature reviews
-- [ ] **Research Discussions** — Member discussions on research topics
-- [ ] **Active Projects** — Ongoing research projects members can follow or join
-- [ ] **Clinical Insights** — Published insights contributed by members and faculty
-- [ ] **Publications** — Institute publications and papers
-- [ ] **Submit Clinical Insight** — Form for members to submit an insight for editorial review
-- [ ] **Research Item Detail** — Single article, brief, or publication view
+- [x] **Research Feed** — Latest research updates and briefs
+- [x] **Journal Club** — Monthly faculty-moderated literature reviews
+- [x] **Research Discussions** — Member discussions on research topics
+- [x] **Active Projects** — Ongoing research projects members can follow or join
+- [x] **Clinical Insights** — Published insights contributed by members and faculty
+- [x] **Publications** — Institute publications and papers
+- [x] **Submit Clinical Insight** — Form for members to submit an insight for editorial review
+- [x] **Research Item Detail** — Single article, brief, or publication view
 
 ## Grand Rounds
-- [ ] **Upcoming Sessions** — Schedule of upcoming live sessions
-- [ ] **Session Detail** — Topic, faculty, agenda, and registration for one session
-- [ ] **Register** — Session registration / confirmation
-- [ ] **Join Live** — Live session room with video and Q&A
-- [ ] **Replays** — Recordings of past sessions with summaries and quizzes
+- [x] **Upcoming Sessions** — Schedule of upcoming live sessions
+- [x] **Session Detail** — Topic, faculty, agenda, and registration for one session
+- [x] **Register** — Session registration / confirmation
+- [x] **Join Live** — Live session room with video and Q&A
+- [x] **Replays** — Recordings of past sessions with summaries and quizzes
 
 ## Network
 - [ ] **Professional Community** — Main community feed

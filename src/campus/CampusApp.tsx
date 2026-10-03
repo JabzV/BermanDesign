@@ -11,10 +11,18 @@ import ClinicalCases from './library/ClinicalCases'
 import GrandRoundsLibrary from './library/GrandRoundsLibrary'
 import LibraryItem from './library/LibraryItem'
 import { TOPICS, type TopicKey } from './data/library'
+import ResearchHub, { type ResearchTab } from './research/ResearchHub'
+import SubmitInsight from './research/SubmitInsight'
+import ResearchItem from './research/ResearchItem'
+import GrandRoundsHub from './grandRounds/GrandRoundsHub'
+import SessionDetail from './grandRounds/SessionDetail'
+import Register from './grandRounds/Register'
+import JoinLive from './grandRounds/JoinLive'
 import { EmptyState, buttonPrimary } from './ui'
 import { useHashRoute } from './router'
 
 const LEARN_TABS: LearnTab[] = ['programs', 'courses', 'masterclasses', 'intensives', 'saved', 'completed']
+const RESEARCH_TABS: ResearchTab[] = ['journal-club', 'discussions', 'projects', 'insights', 'publications']
 
 const SECTION_TITLES: Record<CampusSection, string> = {
   home: 'Home',
@@ -67,6 +75,23 @@ export default function CampusApp({ onSignOut }: { onSignOut: () => void }) {
     if (kind === 'item' && a) return <LibraryItem key={a} id={a} onSignOut={onSignOut} />
     const topic = kind === 'topic' && TOPICS.some((t) => t.key === a) ? (a as TopicKey) : undefined
     return <LibraryHome key={topic ?? 'all'} topic={topic} onSignOut={onSignOut} />
+  }
+
+  if (section === 'research') {
+    const [kind, a] = rest
+    if (kind === 'submit') return <SubmitInsight onSignOut={onSignOut} />
+    if (kind === 'item' && a) return <ResearchItem key={a} id={a} onSignOut={onSignOut} />
+    const tab = RESEARCH_TABS.includes(kind as ResearchTab) ? (kind as ResearchTab) : 'feed'
+    return <ResearchHub tab={tab} onSignOut={onSignOut} />
+  }
+
+  if (section === 'grand-rounds') {
+    const [kind, a, b] = rest
+    if (kind === 'replays') return <GrandRoundsHub tab="replays" onSignOut={onSignOut} />
+    if (kind === 'live' && a) return <JoinLive key={a} id={a} onSignOut={onSignOut} />
+    if (kind === 'session' && a && b === 'register') return <Register key={a} id={a} onSignOut={onSignOut} />
+    if (kind === 'session' && a) return <SessionDetail key={a} id={a} onSignOut={onSignOut} />
+    return <GrandRoundsHub tab="upcoming" onSignOut={onSignOut} />
   }
 
   if (section === 'home' || !(section in SECTION_TITLES)) return <CampusDashboard onSignOut={onSignOut} />

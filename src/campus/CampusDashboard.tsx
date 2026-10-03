@@ -61,18 +61,21 @@ const RESEARCH_THIS_WEEK = [
     title: 'GLP-1 Weight Loss vs. Muscle Preservation: Navigating the Trade-Off',
     author: 'Dr. Sarah Chen',
     meta: '8 min read',
+    href: '#/research/journal-club',
   },
   {
     tag: 'Research Brief',
     title: 'Biological Age Testing: Which Clocks Perform Best in Clinical Practice',
     author: 'Research Team',
     meta: '5 min read',
+    href: '#/research/item/rb-clocks',
   },
   {
     tag: 'Clinical Insight',
     title: 'Mitochondrial Biogenesis Protocols: Evidence from Recent Trials',
     author: 'Dr. Marcus Torres',
     meta: '6 min read',
+    href: '#/research/item/rb-mito',
   },
 ]
 
@@ -83,8 +86,8 @@ const NEW_IN_LIBRARY = [
 ]
 
 const UPCOMING_ROUNDS = [
-  { month: 'Oct', day: '24', title: 'Peptides in Musculoskeletal Recovery', speaker: 'Dr. Marcus Torres' },
-  { month: 'Nov', day: '21', title: 'Biomarker Panels: What to Order and When', speaker: 'Dr. Sarah Chen' },
+  { month: 'Oct', day: '24', title: 'Peptides in Musculoskeletal Recovery', speaker: 'Dr. Marcus Torres', href: '#/grand-rounds/session/gr-oct-24' },
+  { month: 'Nov', day: '21', title: 'Biomarker Panels: What to Order and When', speaker: 'Dr. Sarah Chen', href: '#/grand-rounds/session/gr-nov-21' },
 ]
 
 const fade = (delay: number) => ({
@@ -176,7 +179,7 @@ function ResearchThisWeek() {
       <SectionHeader title="Research This Week" action="View all" href="#/research" />
       <Card className="divide-y divide-[#d1d9e6]">
         {RESEARCH_THIS_WEEK.map((r) => (
-          <a key={r.title} href="#/research" className="flex items-start gap-4 p-4 group">
+          <a key={r.title} href={r.href} className="flex items-start gap-4 p-4 group">
             <div className="flex-1 min-w-0">
               <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#c9a84c] border border-[#c9a84c]/30 rounded-full px-2 py-0.5">
                 {r.tag}
@@ -238,13 +241,16 @@ function UpcomingGrandRounds() {
         <h3 className="font-serif text-lg leading-snug mt-4">GLP-1 Beyond Weight Loss: Complex Clinical Cases</h3>
         <p className="text-xs text-[#5a6a84] mt-2">Dr. Dean Berman + Guest Faculty</p>
         <p className="text-xs text-[#5a6a84] mt-1">Live Case Review · Evidence Update · Q&amp;A</p>
-        <button className="w-full mt-5 bg-[#0d2147] text-white py-2.5 rounded-full text-sm font-bold hover:bg-[#1a3260] transition-colors">
+        <a
+          href="#/grand-rounds/session/gr-oct-9/register"
+          className="block text-center w-full mt-5 bg-[#0d2147] text-white py-2.5 rounded-full text-sm font-bold hover:bg-[#1a3260] transition-colors"
+        >
           Register
-        </button>
+        </a>
       </Card>
       <Card className="mt-3 divide-y divide-[#d1d9e6]">
         {UPCOMING_ROUNDS.map((r) => (
-          <a key={r.title} href="#/grand-rounds" className="flex items-center gap-4 p-4 group">
+          <a key={r.title} href={r.href} className="flex items-center gap-4 p-4 group">
             <div className="w-11 text-center shrink-0">
               <div className="text-[#c9a84c] font-bold text-[10px] uppercase">{r.month}</div>
               <div className="font-serif text-xl leading-none">{r.day}</div>

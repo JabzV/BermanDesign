@@ -40,7 +40,7 @@ export interface LibraryItem {
 }
 
 export const LIBRARY: LibraryItem[] = [
-  { id: 'gr-2026-09', type: 'grand-rounds', title: 'GLP-1 Beyond Weight Loss: Complex Clinical Cases', summary: 'Cardiometabolic outcomes, sarcopenia risk and three difficult titration cases.', topic: 'glp1', faculty: 'berman', minutes: 74, date: 'Sep 11, 2026', cme: 1.5, isNew: true },
+  { id: 'gr-2026-09', type: 'grand-rounds', title: 'After the Weight Loss: GLP-1 Maintenance and Tapering', summary: 'What happens when patients stop, how to taper, and protecting lean mass along the way.', topic: 'glp1', faculty: 'berman', minutes: 74, date: 'Sep 11, 2026', cme: 1.5, isNew: true },
   { id: 'v-glp1-titration', type: 'video', title: 'Titration Strategies for Complex Patients', summary: 'Stepwise dosing when GI effects, polypharmacy or low BMI complicate treatment.', topic: 'glp1', faculty: 'berman', minutes: 22, date: 'Sep 29, 2026', cme: 0.5, isNew: true },
   { id: 'c-lean-ir', type: 'case', title: 'Insulin Resistance in a Lean 42-Year-Old', summary: 'Normal BMI and A1c, but fatigue, rising triglycerides and a family history of diabetes.', topic: 'metabolic', faculty: 'torres', minutes: 15, date: 'Sep 26, 2026', cme: 0.5, isNew: true, patient: '42-year-old woman, BMI 22, fatigue and afternoon crashes', level: 'Intermediate', discussion: 23 },
   { id: 'a-perimenopause', type: 'article', title: 'Perimenopause and Metabolic Health', summary: 'Why insulin sensitivity, visceral fat and lipids shift in the menopausal transition, and what to monitor.', topic: 'hormones', faculty: 'chen', minutes: 9, date: 'Sep 24, 2026', isNew: true },
