@@ -21,6 +21,7 @@ const TABS: { key: Tab; label: string }[] = [
   { key: 'resources', label: 'Resources' },
   { key: 'notes', label: 'Notes' },
 ]
+
 function LessonTabs() {
   const [tab, setTab] = useState<Tab>('overview')
   const [notes, setNotes] = useState('')

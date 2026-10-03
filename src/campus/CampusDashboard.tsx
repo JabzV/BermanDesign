@@ -77,9 +77,9 @@ const RESEARCH_THIS_WEEK = [
 ]
 
 const NEW_IN_LIBRARY = [
-  { category: 'GLP-1', title: 'Titration Strategies for Complex Patients', type: 'Video', icon: PlayCircle },
-  { category: 'Clinical Cases', title: 'Insulin Resistance in a Lean 42-Year-Old', type: 'Case', icon: Stethoscope },
-  { category: 'Hormones', title: 'Perimenopause and Metabolic Health', type: 'Article', icon: FileText },
+  { category: 'GLP-1', title: 'Titration Strategies for Complex Patients', type: 'Video', icon: PlayCircle, href: '#/library/item/v-glp1-titration' },
+  { category: 'Clinical Cases', title: 'Insulin Resistance in a Lean 42-Year-Old', type: 'Case', icon: Stethoscope, href: '#/library/item/c-lean-ir' },
+  { category: 'Hormones', title: 'Perimenopause and Metabolic Health', type: 'Article', icon: FileText, href: '#/library/item/a-perimenopause' },
 ]
 
 const UPCOMING_ROUNDS = [
@@ -203,7 +203,7 @@ function NewInLibrary() {
           const Icon = item.icon
           return (
             <Card key={item.title} className="p-4 hover:border-[#c9a84c]/60 transition-colors">
-              <a href="#/library" className="block">
+              <a href={item.href} className="block">
                 <div className="flex items-center justify-between">
                   <div className="w-10 h-10 rounded-full bg-[#e8edf5] flex items-center justify-center">
                     <Icon className="w-5 h-5 text-[#0d2147]" strokeWidth={1.8} />

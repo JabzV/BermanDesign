@@ -44,6 +44,12 @@ const SIDEBAR_ITEMS: { key: CampusSection; label: string; icon: typeof Home }[] 
 
 // Mobile exposes only five primary items (System Reference §5)
 const MOBILE_ITEMS: CampusSection[] = ['home', 'learn', 'research', 'network', 'profile']
+// Sections without a mobile tab highlight their parent (System Reference §5)
+const MOBILE_PARENT: Partial<Record<CampusSection, CampusSection>> = {
+  library: 'learn',
+  'grand-rounds': 'home',
+  credentials: 'profile',
+}
 
 const ACCOUNT_LINKS = [
   { label: 'Professional Profile', icon: UserCircle },
@@ -246,7 +252,7 @@ export default function CampusLayout({ active, title, onSignOut, children, back,
             {MOBILE_ITEMS.map((key) => {
               const item = SIDEBAR_ITEMS.find((i) => i.key === key)!
               const Icon = item.icon
-              const isActive = key === active
+              const isActive = key === active || MOBILE_PARENT[active] === key
               return (
                 <a
                   key={key}

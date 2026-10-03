@@ -350,7 +350,11 @@ export default function LearnHub({ tab, onSignOut }: { tab: LearnTab; onSignOut:
     <CampusLayout active="learn" title="Learn" onSignOut={onSignOut}>
       {tab === 'programs' && <ResumeCard />}
       <div className={tab === 'programs' ? 'mt-8 mb-6' : 'mb-6'}>
-        <TabChips tabs={TABS.map((t) => ({ ...t, href: `#/learn/${t.key}` }))} active={tab} />
+        <TabChips
+          label="Learn sections"
+          tabs={[...TABS.map((t) => ({ ...t, href: `#/learn/${t.key}` })), { key: 'library', label: 'Clinical Library', href: '#/library' }]}
+          active={tab}
+        />
       </div>
       {tab === 'programs' && <ProgramsTab />}
       {tab === 'courses' && <CatalogList items={COURSES} kind="course" />}

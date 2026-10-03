@@ -165,7 +165,7 @@ export function EmptyState({ icon: Icon, title, body, action }: { icon: LucideIc
   )
 }
 
-export function TabChips({ tabs, active }: { tabs: { key: string; label: string; href: string; count?: number }[]; active: string }) {
+export function TabChips({ tabs, active, label = 'Sections' }: { tabs: { key: string; label: string; href: string; count?: number }[]; active: string; label?: string }) {
   const activeRef = useRef<HTMLAnchorElement>(null)
   useEffect(() => {
     const el = activeRef.current
@@ -173,7 +173,7 @@ export function TabChips({ tabs, active }: { tabs: { key: string; label: string;
     if (el && row) row.scrollLeft = el.offsetLeft - (row.clientWidth - el.offsetWidth) / 2
   }, [active])
   return (
-    <nav aria-label="Learn sections" className="relative -mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto [scrollbar-width:none]">
+    <nav aria-label={label} className="relative -mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto [scrollbar-width:none]">
       <ul className="flex gap-2 w-max pr-4 sm:pr-0">
         {tabs.map((t) => {
           const isActive = t.key === active

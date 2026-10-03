@@ -6,6 +6,11 @@ import ProgramOverview from './learn/ProgramOverview'
 import ModulePage from './learn/ModulePage'
 import LessonPlayer from './learn/LessonPlayer'
 import Assessment from './learn/Assessment'
+import LibraryHome from './library/LibraryHome'
+import ClinicalCases from './library/ClinicalCases'
+import GrandRoundsLibrary from './library/GrandRoundsLibrary'
+import LibraryItem from './library/LibraryItem'
+import { TOPICS, type TopicKey } from './data/library'
 import { EmptyState, buttonPrimary } from './ui'
 import { useHashRoute } from './router'
 
@@ -53,6 +58,15 @@ export default function CampusApp({ onSignOut }: { onSignOut: () => void }) {
     if (kind === 'lesson' && a) return <LessonPlayer key={a} id={a} onSignOut={onSignOut} />
     if (kind === 'assessment' && a) return <Assessment key={a} id={a} onSignOut={onSignOut} />
     return <LearnHub tab="programs" onSignOut={onSignOut} />
+  }
+
+  if (section === 'library') {
+    const [kind, a] = rest
+    if (kind === 'cases') return <ClinicalCases onSignOut={onSignOut} />
+    if (kind === 'grand-rounds') return <GrandRoundsLibrary onSignOut={onSignOut} />
+    if (kind === 'item' && a) return <LibraryItem key={a} id={a} onSignOut={onSignOut} />
+    const topic = kind === 'topic' && TOPICS.some((t) => t.key === a) ? (a as TopicKey) : undefined
+    return <LibraryHome key={topic ?? 'all'} topic={topic} onSignOut={onSignOut} />
   }
 
   if (section === 'home' || !(section in SECTION_TITLES)) return <CampusDashboard onSignOut={onSignOut} />

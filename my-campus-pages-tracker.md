@@ -24,10 +24,10 @@ Logged-in learner experience. Source: [BERMAN_INSTITUTE_SYSTEM_REFERENCE.md](BER
 - [x] **Completed Learning** — Finished courses and programs, with links to certificates
 
 ## Clinical Library
-- [ ] **Library Home** — Browse by category: Longevity, Metabolic Health, GLP-1, Peptides, Biomarkers, Hormones, Aesthetics
-- [ ] **Clinical Cases** — Collection of case studies
-- [ ] **Grand Rounds Library** — Archive of past Grand Rounds recordings
-- [ ] **Library Item Detail** — Single video, article, or case view
+- [x] **Library Home** — Browse by category: Longevity, Metabolic Health, GLP-1, Peptides, Biomarkers, Hormones, Aesthetics
+- [x] **Clinical Cases** — Collection of case studies
+- [x] **Grand Rounds Library** — Archive of past Grand Rounds recordings
+- [x] **Library Item Detail** — Single video, article, or case view
 
 ## Research
 - [ ] **Research Feed** — Latest research updates and briefs
