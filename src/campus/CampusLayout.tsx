@@ -9,7 +9,6 @@ import {
   Users,
   Award,
   UserCircle,
-  Search,
   Bell,
   LogOut,
   ChevronDown,
@@ -20,6 +19,8 @@ import {
 } from 'lucide-react'
 import { cn } from '../lib/utils'
 import logo from '../imports/image-3.png'
+import GlobalSearch from './GlobalSearch'
+import NotificationsPanel from './NotificationsPanel'
 
 export type CampusSection =
   | 'home'
@@ -211,22 +212,8 @@ export default function CampusLayout({ active, title, onSignOut, children, back,
               )}
               <h1 className={cn('font-serif truncate', back ? 'text-2xl' : 'text-3xl')}>{title}</h1>
             </div>
-            <div className="ml-auto hidden md:flex items-center gap-3 bg-white border border-[#d1d9e6] rounded-full px-4 py-2.5 w-80 focus-within:border-[#c9a84c] transition-colors">
-              <Search className="w-4 h-4 text-[#5a6a84]" />
-              <input
-                type="search"
-                aria-label="Search My Campus"
-                placeholder="Search courses, library, research…"
-                className="flex-1 bg-transparent text-sm outline-none placeholder:text-[#5a6a84]"
-              />
-            </div>
-            <button aria-label="Search" className="md:hidden ml-auto w-11 h-11 flex items-center justify-center text-[#0d2147]">
-              <Search className="w-5 h-5" />
-            </button>
-            <button aria-label="Notifications" className="relative w-11 h-11 flex items-center justify-center text-[#0d2147] hover:text-[#8a6d22] transition-colors">
-              <Bell className="w-5 h-5" />
-              <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#c9a84c] ring-2 ring-[#f5f6f8]" />
-            </button>
+            <GlobalSearch />
+            <NotificationsPanel />
             <AccountMenu onSignOut={onSignOut} />
           </div>
         </header>

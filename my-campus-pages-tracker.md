@@ -5,8 +5,8 @@ Logged-in learner experience. Source: [BERMAN_INSTITUTE_SYSTEM_REFERENCE.md](BER
 ## Shared / Layout
 - [x] **Desktop Navigation** — Sidebar or top nav linking all My Campus sections
 - [x] **Mobile Bottom Navigation** — Five tabs only: Home, Learn, Research, Network, Profile
-- [ ] **Global Search** — Search across courses, library, research, and members
-- [ ] **Notifications Panel** — Alerts for Grand Rounds, discussions, progress, and credentials
+- [x] **Global Search** — Search across courses, library, research, and members
+- [x] **Notifications Panel** — Alerts for Grand Rounds, discussions, progress, and credentials
 
 ## Home
 - [x] **Dashboard** — Continue Learning, Program Progress, Upcoming Grand Rounds, Research This Week, New in Clinical Library, Credentials summary

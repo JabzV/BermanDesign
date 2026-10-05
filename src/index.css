@@ -68,10 +68,12 @@ html {
 
 ::selection { background: rgba(201, 168, 76, 0.35); color: var(--navy); }
 
-:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-  border-radius: 4px;
+/* In the base layer so component utilities (rounded-*, outline-*) can override it. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
 }
 
 input, textarea { caret-color: var(--gold); accent-color: var(--navy); }
