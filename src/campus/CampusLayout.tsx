@@ -52,11 +52,11 @@ const MOBILE_PARENT: Partial<Record<CampusSection, CampusSection>> = {
 }
 
 const ACCOUNT_LINKS = [
-  { label: 'Professional Profile', icon: UserCircle },
-  { label: 'Verification Status', icon: ShieldCheck },
-  { label: 'Membership', icon: CreditCard },
-  { label: 'Notifications', icon: Bell },
-  { label: 'Settings', icon: Settings },
+  { label: 'Professional Profile', icon: UserCircle, href: '#/profile' },
+  { label: 'Verification Status', icon: ShieldCheck, href: '#/profile/verification' },
+  { label: 'Membership', icon: CreditCard, href: '#/profile/membership' },
+  { label: 'Notifications', icon: Bell, href: '#/profile/notifications' },
+  { label: 'Settings', icon: Settings, href: '#/profile/account' },
 ]
 
 function AccountMenu({ onSignOut }: { onSignOut: () => void }) {
@@ -123,10 +123,10 @@ function AccountMenu({ onSignOut }: { onSignOut: () => void }) {
               </div>
             </div>
             <div className="py-2">
-              {ACCOUNT_LINKS.map(({ label, icon: Icon }) => (
+              {ACCOUNT_LINKS.map(({ label, icon: Icon, href }) => (
                 <a
                   key={label}
-                  href="#/profile"
+                  href={href}
                   role="menuitem"
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-3 px-5 py-2.5 text-sm text-[#0d2147] hover:bg-[#f5f6f8] transition-colors"

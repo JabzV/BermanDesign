@@ -330,7 +330,7 @@ function CompletedTab() {
               </div>
             </div>
             {c.certificate ? (
-              <a href="#/credentials" className={cn(buttonSecondary, 'self-start sm:self-auto ml-10 sm:ml-0')}>
+              <a href={`#/credentials/certificate/${c.certificateId}`} className={cn(buttonSecondary, 'self-start sm:self-auto ml-10 sm:ml-0')}>
                 <Award className="w-4 h-4 text-[#8a6d22]" /> Certificate
               </a>
             ) : (

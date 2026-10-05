@@ -143,7 +143,7 @@ function CaseBody({ item }: { item: Item }) {
               ))}
             </ul>
           </Card>
-          <a href="#/network" className="flex items-center gap-3 rounded-xl border border-[#d1d9e6] bg-white p-4 hover:border-[#0d2147]/40 transition-colors">
+          <a href="#/network/clinical" className="flex items-center gap-3 rounded-xl border border-[#d1d9e6] bg-white p-4 hover:border-[#0d2147]/40 transition-colors">
             <MessageSquare className="w-5 h-5 text-[#5a6a84]" />
             <span className="flex-1 text-sm">
               <span className="font-semibold">Join the case discussion</span>

@@ -234,3 +234,19 @@ export function FilterChips<T extends string>({
     </div>
   )
 }
+
+/** Accessible on/off switch (a styled checkbox with role="switch"). */
+export function Switch({ checked, onChange, label, className }: { checked: boolean; onChange: (v: boolean) => void; label: string; className?: string }) {
+  return (
+    <label className={cn('relative inline-flex items-center cursor-pointer shrink-0 min-h-11', className)}>
+      <input type="checkbox" role="switch" checked={checked} onChange={(e) => onChange(e.target.checked)} aria-label={label} className="peer sr-only" />
+      <span className="relative w-11 h-6 rounded-full bg-[#d1d9e6] peer-checked:bg-[#0d2147] peer-focus-visible:ring-2 peer-focus-visible:ring-[#c9a84c] peer-focus-visible:ring-offset-2 transition-colors after:absolute after:top-0.5 after:left-0.5 after:w-5 after:h-5 after:rounded-full after:bg-white after:shadow-[0_1px_2px_rgba(0,0,0,0.2)] after:transition-transform peer-checked:after:translate-x-5" />
+    </label>
+  )
+}
+
+export const inputClass = (error?: boolean) =>
+  cn(
+    'w-full min-h-12 rounded-xl border bg-white px-4 text-[15px] outline-none transition-colors placeholder:text-[#8392aa] disabled:bg-[#f5f6f8] disabled:text-[#5a6a84]',
+    error ? 'border-[#c25b5b] focus:border-[#c25b5b]' : 'border-[#d1d9e6] focus:border-[#c9a84c]',
+  )

@@ -126,7 +126,7 @@ function FacultyCard() {
           ))}
       </ul>
       <a
-        href="#/network"
+        href="#/network/cohort"
         className="mt-5 pt-4 border-t border-[#d1d9e6] flex items-center gap-3 text-sm font-semibold hover:text-[#1a3260]"
       >
         <Users className="w-4 h-4 text-[#5a6a84]" />

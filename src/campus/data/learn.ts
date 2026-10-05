@@ -364,10 +364,10 @@ export const SAVED: SavedItem[] = [
   { id: 's4', title: 'Titration Strategies for Complex Patients', source: 'Clinical Library · GLP-1', type: 'library', minutes: 22, href: '#/learn/lesson/m4-5' },
 ]
 
-export const COMPLETED: { id: string; title: string; kind: string; completedOn: string; cme: number; certificate: boolean }[] = [
-  { id: 'c1', title: 'GLP-1 Fundamentals', kind: 'Masterclass', completedOn: 'Sep 12, 2026', cme: 2, certificate: true },
+export const COMPLETED: { id: string; title: string; kind: string; completedOn: string; cme: number; certificate: boolean; certificateId?: string }[] = [
+  { id: 'c1', title: 'GLP-1 Fundamentals', kind: 'Masterclass', completedOn: 'Sep 12, 2026', cme: 2, certificate: true, certificateId: 'glp1-fundamentals' },
   { id: 'c2', title: 'Module 3 · Biomarkers & Biological Age', kind: 'Advanced Certificate', completedOn: 'Sep 28, 2026', cme: 4, certificate: false },
   { id: 'c3', title: 'Module 2 · Metabolic Health', kind: 'Advanced Certificate', completedOn: 'Sep 8, 2026', cme: 4, certificate: false },
   { id: 'c4', title: 'Module 1 · Foundations of Longevity Medicine', kind: 'Advanced Certificate', completedOn: 'Aug 21, 2026', cme: 4, certificate: false },
-  { id: 'c5', title: 'Free Webinar: Clinical Updates in Longevity', kind: 'Free Education', completedOn: 'Jul 30, 2026', cme: 1, certificate: true },
+  { id: 'c5', title: 'Free Webinar: Clinical Updates in Longevity', kind: 'Free Education', completedOn: 'Jul 30, 2026', cme: 1, certificate: true, certificateId: 'clinical-updates-longevity' },
 ]

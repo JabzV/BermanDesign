@@ -18,11 +18,23 @@ import GrandRoundsHub from './grandRounds/GrandRoundsHub'
 import SessionDetail from './grandRounds/SessionDetail'
 import Register from './grandRounds/Register'
 import JoinLive from './grandRounds/JoinLive'
+import NetworkHub, { type NetworkTab } from './network/NetworkHub'
+import ThreadPage from './network/ThreadPage'
+import MemberProfile from './network/MemberProfile'
+import CredentialsHub, { type CredentialsTab } from './credentials/CredentialsHub'
+import CertificateView from './credentials/CertificateView'
+import ProfessionalProfile from './profile/ProfessionalProfile'
+import VerificationStatus from './profile/VerificationStatus'
+import Membership from './profile/Membership'
+import NotificationSettings from './profile/NotificationSettings'
+import AccountSettings from './profile/AccountSettings'
 import { EmptyState, buttonPrimary } from './ui'
 import { useHashRoute } from './router'
 
 const LEARN_TABS: LearnTab[] = ['programs', 'courses', 'masterclasses', 'intensives', 'saved', 'completed']
 const RESEARCH_TABS: ResearchTab[] = ['journal-club', 'discussions', 'projects', 'insights', 'publications']
+const NETWORK_TABS: NetworkTab[] = ['cohort', 'ask-faculty', 'journal-club', 'clinical', 'directory']
+const CREDENTIALS_TABS: CredentialsTab[] = ['advanced', 'record', 'cme', 'verification']
 
 const SECTION_TITLES: Record<CampusSection, string> = {
   home: 'Home',
@@ -92,6 +104,30 @@ export default function CampusApp({ onSignOut }: { onSignOut: () => void }) {
     if (kind === 'session' && a && b === 'register') return <Register key={a} id={a} onSignOut={onSignOut} />
     if (kind === 'session' && a) return <SessionDetail key={a} id={a} onSignOut={onSignOut} />
     return <GrandRoundsHub tab="upcoming" onSignOut={onSignOut} />
+  }
+
+  if (section === 'network') {
+    const [kind, a] = rest
+    if (kind === 'thread' && a) return <ThreadPage key={a} id={a} onSignOut={onSignOut} />
+    if (kind === 'member' && a) return <MemberProfile key={a} id={a} onSignOut={onSignOut} />
+    const tab = NETWORK_TABS.includes(kind as NetworkTab) ? (kind as NetworkTab) : 'community'
+    return <NetworkHub tab={tab} onSignOut={onSignOut} />
+  }
+
+  if (section === 'credentials') {
+    const [kind, a] = rest
+    if (kind === 'certificate' && a) return <CertificateView key={a} id={a} onSignOut={onSignOut} />
+    const tab = CREDENTIALS_TABS.includes(kind as CredentialsTab) ? (kind as CredentialsTab) : 'certificates'
+    return <CredentialsHub tab={tab} onSignOut={onSignOut} />
+  }
+
+  if (section === 'profile') {
+    const [kind] = rest
+    if (kind === 'verification') return <VerificationStatus onSignOut={onSignOut} />
+    if (kind === 'membership') return <Membership onSignOut={onSignOut} />
+    if (kind === 'notifications') return <NotificationSettings onSignOut={onSignOut} />
+    if (kind === 'account') return <AccountSettings onSignOut={onSignOut} />
+    return <ProfessionalProfile onSignOut={onSignOut} />
   }
 
   if (section === 'home' || !(section in SECTION_TITLES)) return <CampusDashboard onSignOut={onSignOut} />

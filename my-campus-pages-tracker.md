@@ -47,26 +47,26 @@ Logged-in learner experience. Source: [BERMAN_INSTITUTE_SYSTEM_REFERENCE.md](BER
 - [x] **Replays** — Recordings of past sessions with summaries and quizzes
 
 ## Network
-- [ ] **Professional Community** — Main community feed
-- [ ] **My Cohort** — Members enrolled in the same program intake
-- [ ] **Ask the Faculty** — Submit and browse questions answered by faculty
-- [ ] **Journal Club Discussions** — Discussion threads tied to Journal Club sessions
-- [ ] **Clinical Discussions** — Case and practice discussions between members
-- [ ] **Member Directory** — Searchable list of verified members
-- [ ] **Discussion Thread** — Single thread with replies
-- [ ] **Member Profile (Public)** — How a member's profile appears to others
+- [x] **Professional Community** — Main community feed
+- [x] **My Cohort** — Members enrolled in the same program intake
+- [x] **Ask the Faculty** — Submit and browse questions answered by faculty
+- [x] **Journal Club Discussions** — Discussion threads tied to Journal Club sessions
+- [x] **Clinical Discussions** — Case and practice discussions between members
+- [x] **Member Directory** — Searchable list of verified members
+- [x] **Discussion Thread** — Single thread with replies
+- [x] **Member Profile (Public)** — How a member's profile appears to others
 
 ## Credentials
-- [ ] **Certificates** — Earned certificates of completion
-- [ ] **Advanced Credentials** — Advanced Certificate and higher-level credentials
-- [ ] **Academic Record** — Full history of courses, grades, and completions
-- [ ] **CME / CE Record** — Continuing education credits earned
-- [ ] **Credential Verification** — Shareable link/ID for third parties to verify a credential
-- [ ] **Certificate View** — View and download a single certificate
+- [x] **Certificates** — Earned certificates of completion
+- [x] **Advanced Credentials** — Advanced Certificate and higher-level credentials
+- [x] **Academic Record** — Full history of courses, grades, and completions
+- [x] **CME / CE Record** — Continuing education credits earned
+- [x] **Credential Verification** — Shareable link/ID for third parties to verify a credential
+- [x] **Certificate View** — View and download a single certificate
 
 ## Profile
-- [ ] **Professional Profile** — Name, photo, bio, specialty, and organization
-- [ ] **Verification Status** — Professional license/credential verification state
-- [ ] **Membership** — Current membership plan, benefits, and renewal
-- [ ] **Notifications Settings** — Email and in-app notification preferences
-- [ ] **Account Settings** — Password, security, and account details
+- [x] **Professional Profile** — Name, photo, bio, specialty, and organization
+- [x] **Verification Status** — Professional license/credential verification state
+- [x] **Membership** — Current membership plan, benefits, and renewal
+- [x] **Notifications Settings** — Email and in-app notification preferences
+- [x] **Account Settings** — Password, security, and account details
